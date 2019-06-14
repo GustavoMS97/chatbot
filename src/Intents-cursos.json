@@ -1,0 +1,172 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Oi",
+        "Olá",
+        "Bom dia",
+        "Boa tarde",
+        "Boa noite"
+      ],
+      "responses": [
+        "Posso ajudar?",
+        "Pois não?",
+        "Como posso ser útil?"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "Tchau",
+        "Até mais",
+        "Até logo"
+      ],
+      "responses": [
+        "Até logo, vejo você no  vestibular",
+        "Até mais! Boa mostra de profissões para você",
+        "Tchau! Volte logo!."
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": [
+        "Obrigado",
+        "Grato",
+        "Valeu",
+        "Agradeço"
+      ],
+      "responses": [
+        "Fico feliz em ajudar!",
+        "Conte comigo",
+        "Por nada!"
+      ]
+    },
+    {
+      "tag": "duracao",
+      "patterns": [
+        "Quanto tempo o curso dura?",
+        "Qual a duração?",
+        "Quantos anos o curso dura?",
+        "Quando eu vou me formar?",
+        "em quanto tempo vou estar formado?"
+      ],
+      "responses": [
+        "O curso de @curso dura @duracao."
+      ]
+    },
+    {
+      "tag": "profissao",
+      "patterns": [
+        "No que eu vou trabalhar?",
+        "Qual é a profissão?",
+        "Faz o que?",
+        "Onde eu vou trabalhar?",
+        "O que eu vou fazer?"
+      ],
+      "responses": [
+        "Quem se forma em @curso trabalha no mercado de tecnologia, @atividades"
+      ]
+    },
+    {
+      "tag": "diferenca",
+      "patterns": [
+        "Qual é o diferencial?",
+        "O que o curso tem de diferente?",
+        "O que você acha?",
+        "Esse curso é bom?",
+        "Você gosta?"
+      ],
+      "responses": [
+        "@diferenca"
+      ]
+    },
+    {
+      "tag": "atividades",
+      "patterns": [
+        "Com o que trabalha?",
+        "Quais as atividades exercidas?",
+        "O que vou fazer quando me formar?",
+        "O que o profissional desenvolve?"
+      ],
+      "responses": [
+        "A pessoa formada em @curso, @atividades"
+      ]
+    },
+    {
+      "tag": "onde_fica",
+      "patterns": [
+        "Onde o curso é ofertado?",
+        "Em qual sede?",
+        "Onde tem turmas?",
+        "Onde eu posso fazer?",
+        "Onde são as aulas?"
+      ],
+      "responses": [
+        "Temos turmas @onde_fica"
+      ]
+    },
+    {
+      "tag": "trabalha_onde",
+      "patterns": [
+        "Onde trabalha?",
+        "Em que empresa trabalha?",
+        "Onde posso trabalhar?",
+        "Onde vou atuar?",
+        "Em que empresas atuarei?"
+      ],
+      "responses": [
+        "@trabalha_onde"
+      ]
+    },
+    {
+      "tag": "desconto",
+      "patterns": [
+        "Tem algum desconto?",
+        "Tem bolsa de estudos?",
+        "Posso financiar?",
+        "Posso usar o FIES?"
+      ],
+      "responses": [
+        "Todos os cursos da Universidade Positivo tem acesso a financiamento estudantil. Você precisa entra em contato com a central de atendimento."
+      ]
+    },
+    {
+      "tag": "preco",
+      "patterns": [
+        "Quanto é a mensalidade?",
+        "Quanto custa?",
+        "Qual é o preço?",
+        "Qual é o valor?",
+        "O curso custa quanto?"
+      ],
+      "responses": [
+        "Eu ainda não fui informada sobre os preços, mas sei que você pode consultar na página da Universidade Positivo"
+      ]
+    },
+    {
+      "tag": "nome",
+      "patterns": [
+        "Qual é o seu nome?",
+        "Como você se chama?",
+        "Quem é você?"
+      ],
+      "responses": [
+        "Eu me chamo Mielina",
+        "Meu nome é Mielina, prazer"
+      ]
+    },
+     {
+      "tag": "pato",
+      "patterns": [
+        "O pato é burro",
+        "O pato é retardado",
+        "O pato curte ovo"
+      ],
+      "responses": [
+        "Sim, Alexandre Borges é demente",
+        "Sim Alexandre Pato cheira ovo"
+      ]
+    }
+  ]
+}

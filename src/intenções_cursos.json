@@ -1,0 +1,22 @@
+{
+  "intents": [
+    {
+      "tag": "Duracao",
+      "patterns": [
+        "Quanto tempo dura o curso?"
+      ],
+      "responses": [
+        "O curso @curso dura @anos anos"
+      ]
+    },
+    {
+      "tag": "Carga",
+      "patterns": [
+        "Qual a carga horaria?"
+      ],
+      "responses": [
+        "O curso @curso tem carga horaria de @carga horas"
+      ]
+    }
+  ]
+}

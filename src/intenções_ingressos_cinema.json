@@ -1,0 +1,125 @@
+{
+  "intents": [
+    {
+      "tag": "saudações",
+      "patterns": [
+        "Olá",
+        "Boa tarde",
+        "Gostaria de informações sobre os ingressos"
+      ],
+      "responses": [
+        "Olá, como posso ajudar?",
+        "Boa tarde! O que gostaria de saber?",
+        "Do que voce precisa?"
+      ]
+    },
+    {
+      "tag": "despedida",
+      "patterns": [
+        "Até logo!",
+        "Obrigado pela ajuda",
+        "Tchau"
+      ],
+      "responses": [
+        "Espero ter ajudado!",
+        "Até a próxima",
+        "Obrigado por escolher nosso serviço."
+      ]
+    },
+    {
+      "tag": "agradecimento",
+      "patterns": [
+        "Obrigado",
+        "Grato!",
+        "Valeu"
+      ],
+      "responses": [
+        "Fico feliz em ter ajudado!",
+        "Conte sempre comigo!",
+        "De nada!"
+      ]
+    },
+    {
+      "tag": "Ingressos",
+      "patterns": [
+        "Qual o preço do ingresso?",
+        "Quanto custa?",
+        "Sabe me dizer o valor do ingresso?"
+      ],
+      "responses": [
+        "A meia é 15 e a inteira é 30",
+        "Dias sem promoção, a inteira é 30 reais",
+        "Gostaria de saber das promoções?"
+      ],
+      "context_set": "ingresso"
+    },
+    {
+      "tag": "promoções",
+      "patterns": [
+        "Quais são as promoções?",
+        "Gostaria de saber se tem algum desconto",
+        "Quem paga meia?"
+      ],
+      "responses": [
+        "Temos promoções por dias e por categorias, qual deseja saber mais?",
+        "As promoções variam, gostaria de mais informações?",
+        "Que tipo de promoção voce procura? dia ou por categoria?"
+      ],
+      "context_set": "promoções"
+    },
+    {
+      "tag": "categoria",
+      "patterns": [
+        "Quais são as promoções por categoria?",
+        "Existem categorias?",
+        "Gostaria de me informar sobre as promoções"
+      ],
+      "responses": [
+        "As pessoas que se encaixam nas promoções por categoria sao estudantes e doadores",
+        "Estudantes e doadores pagam meia",
+        "Caso haja apresentação de comprovante, estudantes e doadores pagam meia"
+      ],
+      "context_filter": "promoções"
+    },
+    {
+      "tag": "dia",
+      "patterns": [
+        "Quais são os dias com promoção?",
+        "Quais dias todos pagam meia?",
+        "Durante a semana tem como pagar meia?"
+      ],
+      "responses": [
+        "Terça todos pagam meia e na quinta temos a quinta do beijo, espero ter ajudado :)",
+        "terça e quinta tem promoção",
+        "na quinta do beijo casais pagam metade do valor, e terça todos pagam metade ;)"
+      ],
+      "context_filter": "promoções"
+    },
+    {
+      "tag": "pagamento",
+      "patterns": [
+        "Formas de pagamento?",
+        "Voces aceitam cartão de crédito?",
+        "Como posso pagar?"
+      ],
+      "responses": [
+        "Aceitamos dinheiro e cartões de débito e/ou crédito",
+        "Só nao aceitamos cheque haha",
+        "Qualquer cartão e dinheiro."
+      ]
+    },
+    {
+      "tag": "filmes",
+      "patterns": [
+        "Quais filmes estão em cartaz?",
+        "Voces possuem quais filmes?",
+        "tem filmes de ação passando?"
+      ],
+      "responses": [
+        "Temos filmes de ação, comédia e terror no momento",
+        "Por enquanto os filmes que estão em cartaz são de comédia, terror e ação",
+        "Só temos terror, ação e um de comédia."
+      ]
+    }
+  ]
+}

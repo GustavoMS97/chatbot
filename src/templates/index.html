@@ -1,0 +1,302 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Chatbot</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+          integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}">
+
+</head>
+
+<body class="landing">
+
+<script>
+
+</script>
+
+<!-- Page Wrapper -->
+<div id="page-wrapper">
+
+    <!-- Header -->
+    <header id="header" class="alt">
+        <h1>
+            <a href="index.html">UPBOT</a>
+        </h1>
+        <nav id="nav">
+            <ul>
+                <li class="special">
+                    <a href="#menu" class="menuToggle">
+                        <span>Menu</span>
+                    </a>
+                    <div id="menu">
+                        <ul>
+                            <li>
+                                <a href="#banner" class="scrolly"><i class="fas fa-home"></i> Home</a>
+                            </li>
+                            <li>
+                                <a href="#selection" class="scrolly"><i class="fas fa-hand-point-up"></i> Seleção de curso</a>
+                            </li>
+                            <li>
+                                <a href="#robot" class="scrolly"><i class="fas fa-microphone"></i> Converse comigo</a>
+                            </li>
+                            <li>
+                                <a href="#historic" class="scrolly"><i class="fab fa-whatsapp"></i> Histórico</a>
+                            </li>
+                            <li>
+                                <a href="elements.html"><i class="fas fa-info-circle"></i> Sobre</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Banner -->
+    <section id="banner">
+        <div class="inner">
+            <h2>Mielina</h2>
+            <p>Sou um robô desenvolvido para facilitar
+                <br> o acesso às informações dos cursos de
+                <br> tecnologia da Universidade Positivo.</p>
+        </div>
+        <a href="#selection" onclick="faleMielina('Por favor selecione um curso!')" class="more scrolly">Converse comigo</a>
+    </section>
+
+    <section id="selection" class="wrapper style1 special">
+        <div class="inner">
+            <header>
+                <h2>Qual curso deseja se informar?</h2>
+            </header>
+        </div>
+
+            <ul class="features">
+                <li id="botaoInteligencia" class="fas fa-database botaoCurso">
+                    <a onclick="faleMielina('Vamos falar sobre Ciência de dados e inteligência artificial!')" href="#robot" class="more scrolly">
+                        <h4>Ciência de Dados e Inteligência Artificial</h4>
+                    </a>
+                </li>
+                <li id="botaoAnalise" class="fas fa-code botaoCurso">
+                    <a onclick="faleMielina('Vamos falar sobre Tecnólogo em Análise e Desenvolvimento de Sistemas!')" href="#robot" class="more scrolly">
+                        <h4>Tecnólogo em Análise e Desenvolvimento de Sistemas</h4>
+                    </a>
+                </li>
+                <li id="botaoJogos" class="fas fa-gamepad botaoCurso">
+                    <a onclick="faleMielina('Vamos falar sobre Tecnólogo em jogos digitais!')" href="#robot" class="more scrolly">
+                        <h4>Tecnólogo em Jogos Digitais</h4>
+                    </a>
+                </li>
+                <li id="botaoSoftware" class="fab fa-microsoft botaoCurso">
+                    <a onclick="faleMielina('Vamos falar sobre Engenharia de Software!')" href="#robot" class="more scrolly">
+                        <h4>Engenharia de Software</h4>
+                    </a>
+                </li>
+                <li id="botaoSistemas" class="fas fa-terminal botaoCurso">
+                    <a onclick="faleMielina('Vamos falar sobre Sistemas de informação!')" href="#robot" class="more scrolly">
+                        <h4>Sistemas de Informação</h4>
+                    </a>
+                </li>
+                <li id="botaoComputacao" class="fas fa-microchip botaoCurso">
+                    <a onclick="faleMielina('Vamos falar sobre engenharia da computação!')" href="#robot" class="more scrolly">
+                        <h4>Engenharia da Computação</h4>
+                    </a>
+                </li>
+                <li id="botaoCiencia" class="fas fa-laptop botaoCurso">
+                    <a onclick="faleMielina('Vamos falar sobre ciência da computação!')" href="#robot" class="more scrolly">
+                        <h4>Ciência da Computação</h4>
+                    </a>
+                </li>
+            </ul>
+    </section>
+
+    <!-- Robot -->
+    <section id="robot" class="wrapper style2 special">
+        <div class="inner">
+            <header>
+                <h2>Como poderia ajuda-lo?</h2>
+            </header>
+            <br>
+            <br>
+            <canvas id="waves"></canvas>
+            <br>
+            <br>
+            <table>
+                <thead><h4 style="text-decoration: underline;">Tópicos</h4></thead>
+                <tr>
+                   <th class="far fa-clock"> Duração do curso</th>
+                   <th class="fas fa-briefcase"> Profissão</th>
+                   <th class="far fa-star"> Diferencial do curso</th>
+                   <th class="fas fa-tasks"> Atividades Exercidas</th>
+                </tr>
+                <tr>
+                   <th class="fas fa-map-marker-alt"> Local do curso</th>
+                   <th class="fas fa-building"> Onde irá atuar</th>
+                   <th class="fas fa-hand-holding-usd"> Desconto para o curso</th>
+                   <th class="fas fa-dollar-sign"> Preço do curso</th>
+                </tr>
+            </table>
+
+            <form>
+            <textarea class="note-textarea" name="pergunta" id="note-textarea"
+                      placeholder="DIGITE ou pressione o botão FALE para conversar comigo."
+                      rows="6"></textarea>
+            </form>
+            <br>
+            <!--<button class="button " id="pause-record-btn" title="Pausa no reconhecimento">-->
+                <!--<i class="fas fa-pause"></i> Pare-->
+            <!--</button>-->
+            <button class="button " id="start-record-btn" title="Começe a falar">
+                <i class="fas fa-microphone"></i> Fale
+            </button>
+            <!--<button class="button " id="save-note-btn" title="Enviar">-->
+                <!--<i class="fas fa-location-arrow"></i> Enviar-->
+            <!--</button>-->
+            <br>
+            <br>
+            <br>
+        </div>
+        <a onclick="faleMielina('Vamos lembrar o que conversamos')" href="#historic" class="more scrolly">Lembre o que conversamos</a>
+    </section>
+
+    <!-- Histórico -->
+    <section id="historic" class="wrapper special style3">
+        <div class="inner" >
+            <header class="major">
+                <h2>Histórico</h2>
+            </header>
+            <ul id="notes">
+                <div>
+                    <p class="no-notes">Você ainda não conversou comigo.</p>
+                </div>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Three -->
+    <section id="three" class="wrapper style4 special">
+        <div class="inner">
+            <header class="major">
+                <h2>Sobre</h2>
+
+            </header>
+            <ul class="features">
+                <li class="icon fa-paper-plane-o">
+                    <h3>Objetivo</h3>
+                    <p>A construção do chatbot para convesação teve como objetivo o auxilio aos alunos
+                        que estão com dúvidas, mas também para aqueles que ainda estão decidindo qual
+                        curso irão se matricular. Tirar o máximo possível de dúvidas e esclarecimento de processos.</p>
+                </li>
+                <li class="icon fa-eye">
+                    <h3>A visão</h3>
+                    <p>O nosso chatbot foi focado nos cursos de tecnologia, já que são os que estamos divulgando.
+                        A ideia é que a aplicação seja aproveitada por toda a área da educação, sendo útil para
+                        todos os alunos a qualquer momento.</p>
+                </li>
+                <li class="icon fa-code">
+                    <h3>Tecnologias</h3>
+                    <p>Para o desenvolvimento da nossa aplicação, fizemos o uso da linguagem Python para rede neural
+                        e aprendizado de máquina (machine learning). Para nosso front-end utilizamos JavaScript,
+                        HTML5, e CSS3 para uma aplicação mais robusta visualmente.</p>
+                </li>
+                <li class="icon fa-universal-access">
+                    <h3>Programação é para todos!</h3>
+                    <p>O desenvolvimento de aplicações como essa, e ainda mais aprimoradas são resultado de dedicação
+                    e estudo. Não é necessário anos de carreira para desenvolver algo como isso, somos alunos de primeiro
+                    ano e aprendemos o necessário para o desenvolvimento do projeto em pouco tempo.</p>
+                </li>
+                <li class="icon fa-heart-o">
+                    <h3>Por que Mielina?</h3>
+                    <p>Escolhemos o nome Mielina porque, ao lembrar da biologia, quando falamos da bainha de mielina,
+                        sua função é de acelerar a velocidade da condução do impulso nervoso. Gostamos desse termo pois
+                        conseguimos fazer um paralelo com as redes neurais da aplicação.</p>
+                </li>
+                <li class="icon fa-hand-spock">
+                    <h3>Considerações</h3>
+                    <p>Gostaríamos de agradecer ao professor Leandro Escobar, juntamente com toda a direção dos cursos
+                        de tecnologia, por ceder o espaço e a atenção para o nosso projeto. Gostaríamos de agradecer
+                        também á você, que nos deu a oportunidade de apresentar esse projeto, e mostrar o que a área da
+                        tecnologia da Universidade Positivo pode ofertar. Muito obrigado.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="cta" class="wrapper style4">
+        <div class="inner">
+            <header>
+                <h2>Contatos:</h2>
+            </header>
+            <ul class="actions vertical">
+                <li>
+                    <a href="#" class="fit">gustavoms97@hotmail.com</a>
+                </li>
+                <li>
+                    <a href="#" class="fit">luizeduardooku@hotmail.com</a>
+                </li>
+                <li>
+                    <a href="#" class="fit">l.escobar72@gmail.com</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <ul class="icons">
+            <li>
+                <a href="https://twitter.com/univ_positivo" class="icon fa-twitter">
+                </a>
+            </li>
+            <li>
+                <a href="https://pt-br.facebook.com/universidadepositivo/" class="icon fa-facebook">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/universidadepositivo/" class="icon fa-instagram">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.up.edu.br" class="fab fa-chrome">
+                </a>
+            </li>
+        </ul>
+        <ul class="copyright">
+            <li>&copy; Universidade Positivo</li>
+            <li>
+                <p>Desenvolvido por:</p>
+                <p>Luiz Eduardo Oku<br><br>
+                    Gustavo Martins Do Santos</p>
+            </li>
+            <li>
+                <p>Acompanhado por:</p>
+                <br>
+                <br>
+                <p>Leandro Escobar</p>
+            </li>
+        </ul>
+    </footer>
+
+</div>
+
+
+<script src="{{url_for('static', filename='assets/js/jquery.min.js')}}"></script>
+<script src="{{url_for('static', filename='assets/js/jquery.scrollex.min.js')}}"></script>
+<script src="{{url_for('static', filename='assets/js/jquery.scrolly.min.js')}}"></script>
+<script src="{{url_for('static', filename='assets/js/skel.min.js')}}"></script>
+<script src="{{url_for('static', filename='assets/js/util.js')}}"></script>
+<script src='https://isuttell.github.io/sine-waves/javascripts/sine-waves.min.js'></script>
+
+<script src="{{url_for('static', filename='assets/js/ie/respond.min.js')}}"></script>
+<script src="{{url_for('static', filename='assets/js/main.js')}}"></script>
+<script src="{{url_for('static', filename='assets/js/waves.js')}}"></script>
+<script src="{{url_for('static', filename='assets/js/actions.js')}}"></script>
+<script src="{{url_for('static', filename='assets/js/text-speech.js')}}"></script>
+
+</body>
+
+</html>
